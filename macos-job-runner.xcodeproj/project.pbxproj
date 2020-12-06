@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED4004F3257D52AF006D1A5F /* RunJobUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4004F2257D52AF006D1A5F /* RunJobUseCase.swift */; };
+		ED4004F6257D52E9006D1A5F /* ScriptRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4004F5257D52E9006D1A5F /* ScriptRunner.swift */; };
 		F499EEF6257D3CF5003FB930 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F499EEF5257D3CF5003FB930 /* AppDelegate.swift */; };
 		F499EEF8257D3CF5003FB930 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F499EEF7257D3CF5003FB930 /* ContentView.swift */; };
 		F499EEFA257D3CF7003FB930 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F499EEF9257D3CF7003FB930 /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED4004F2257D52AF006D1A5F /* RunJobUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunJobUseCase.swift; sourceTree = "<group>"; };
+		ED4004F5257D52E9006D1A5F /* ScriptRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptRunner.swift; sourceTree = "<group>"; };
 		F499EEF2257D3CF5003FB930 /* macos-job-runner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "macos-job-runner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F499EEF5257D3CF5003FB930 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F499EEF7257D3CF5003FB930 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 				F499EF01257D3CF7003FB930 /* Info.plist */,
 				F499EF02257D3CF7003FB930 /* macos_job_runner.entitlements */,
 				F499EEFB257D3CF7003FB930 /* Preview Content */,
+				ED4004F2257D52AF006D1A5F /* RunJobUseCase.swift */,
+				ED4004F5257D52E9006D1A5F /* ScriptRunner.swift */,
 			);
 			path = "macos-job-runner";
 			sourceTree = "<group>";
@@ -180,8 +186,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED4004F6257D52E9006D1A5F /* ScriptRunner.swift in Sources */,
 				F499EEF8257D3CF5003FB930 /* ContentView.swift in Sources */,
 				F499EEF6257D3CF5003FB930 /* AppDelegate.swift in Sources */,
+				ED4004F3257D52AF006D1A5F /* RunJobUseCase.swift in Sources */,
 				F499EF1C257D3D99003FB930 /* GetJobUseCase.swift in Sources */,
 				F499EF19257D3D99003FB930 /* JobStatus.swift in Sources */,
 				F499EF1A257D3D99003FB930 /* CurrentJobIdSource.swift in Sources */,

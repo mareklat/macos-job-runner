@@ -12,11 +12,22 @@ struct ContentView: View {
     @ObservedObject var viewModel = DI.container.resolve(JobViewModel.self)!
     
     var body: some View {
-        Text("Hello, World! \(viewModel.jobId)")
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .onAppear {
-                viewModel.setup()
-            }
+        VStack {
+            Text("Job ID: \(viewModel.jobId)")
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            Button(
+                action: {
+                    viewModel.onStartClicked()
+                },
+                label: {
+                    Text("Start")
+                }
+            )
+        }
+        .frame(width: 600, height: 400, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+        .onAppear {
+            viewModel.setup()
+        }
     }
 }
 

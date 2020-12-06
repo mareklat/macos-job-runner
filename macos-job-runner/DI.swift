@@ -22,12 +22,19 @@ class DI {
         
         container.register(JobSource.self) { _ in JobSource() }
         
+        container.register(ScriptRunner.self) { _ in ScriptRunner() }
+
         container.register(GetJobUseCase.self) { r in
             GetJobUseCase(currentJobIdSource: r.resolve(CurrentJobIdSource.self)!, jobSource: r.resolve(JobSource.self)!)
         }
         
+        container.register(RunJobUseCase.self) { r in
+            RunJobUseCase(scriptRunner: r.resolve(ScriptRunner.self)!)
+        }
+        
+        
         container.register(JobViewModel.self) { r in
-            JobViewModel(getJobUseCase: r.resolve(GetJobUseCase.self)!)
+            JobViewModel(getJobUseCase: r.resolve(GetJobUseCase.self)!, runJobUseCase: r.resolve(RunJobUseCase.self)!)
         }
         
     }
