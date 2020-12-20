@@ -32,6 +32,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.setFrameAutosaveName("Main Window")
         window.contentView = NSHostingView(rootView: contentView)
         window.makeKeyAndOrderFront(nil)
+        
+        let handler = DI.container.resolve(JobIdFromUrlHandler.self)!
+        handler.set(id: 1111)//TODO
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

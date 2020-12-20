@@ -13,7 +13,7 @@ class JobSource {
     func getById(jobId: Int) -> Observable<Job>  {
         return Observable.just(Job(
             id: jobId,
-            script: "l -a",
+            script: "ls && touch test && ls",
             artifacts: [],
             created: Date(),
             status: .pending,

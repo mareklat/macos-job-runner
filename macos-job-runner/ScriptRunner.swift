@@ -14,8 +14,8 @@ class ScriptRunner {
             let pipe = Pipe()
             
             task.standardOutput = pipe
-            task.arguments = ["-c", scritpt]
-            task.launchPath = "/bin/zsh"
+            task.arguments = ["-c", "pwd && echo '#!/bin/bash \n \(scritpt)' > script.sh && chmod +x script.sh", "sh ./script.sh"]
+            task.launchPath = "/bin/bash"
             task.launch()
         
 //            pipe.fileHandleForReading.waitForDataInBackgroundAndNotify()
